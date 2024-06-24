@@ -142,11 +142,10 @@ int main()
 	}    
 	wait(1000);
 	
-	for (int i = 0; i < 99999; i++) {
-		writeLedDisplay(i);
-		PORTA = i;
-		_delay_ms(500);
-	}
+	spi_writeChar(4, 1);
+	spi_writeChar(3, 2);
+	spi_writeChar(2, 3);
+	spi_writeChar(1, 4);
 
   	return (1);
 }
